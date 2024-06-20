@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bungee+Shade&family=IBM+Plex+Serif:wght@300&family=Jersey+25+Charted&family=Kablammo&family=Lobster+Two&family=Noto+Sans:wght@100;300&family=Open+Sans:ital,wght@0,300;1,300&family=Orbitron:wght@400..900&family=Playfair:ital,wght@1,400;1,500;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&family=Single+Day&family=Sixtyfour&display=swap');
+
+body {
+    font-family: "Single Day", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.minesweeper{
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    width: 500px;
+    justify-content: center;
+}
+
+.cell{
+    width: 40px;
+    height: 40px;
+    background-color: #c8c8c8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 10px #a0a0a0, -5px -5px 10px #ffffff;
+}
+
+.cell:hover{
+    background-color: #b5b5b5;
+}
+
+.revealed {
+    background-color: #e0e0e0;
+}
+
+.mine {
+    background-color: #ff4d4d;
+    color: #ffffff;
+}
+
+.restart-btn {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 10px #a0a0a0, -5px -5px 10px #ffffff;
+}
+
+.restart-btn:hover{
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px #a0a0a0, -5px -5px 10px #ffffff,
+    inset 3px 3px 5px #000000, inset -3px -3px 5px #ffffff;
+}
